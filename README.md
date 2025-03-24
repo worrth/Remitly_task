@@ -8,16 +8,12 @@ The app is fully containerized with Docker.
 ### How to run
 Steps to run the project:
 1. Clone the repository
-2. In the home directory of the project run the command
-```shell
-  ./mvnw clean package
-```
-3. Run the command
+2.Run the command
 ```shell
     docker-compose up -d
 ```
 
-Docker compose will build the applications image using the [Dockerfile](Dockerfile) enclosed with the project and create the container for the database.
+Docker compose will download the image from Docker repository, build the image and create the container for the database.
 ### Tests
 The tests will automatically run in the building process with the commands included in the [Dockerfile](Dockerfile).
 ### Available endpoints
