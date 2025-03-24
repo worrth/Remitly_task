@@ -1,0 +1,17 @@
+version: '1'
+services:
+  api:
+    image: worrth/remitly_app
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+networks:
+  backend: {}
